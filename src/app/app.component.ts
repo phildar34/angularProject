@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LOCALE_ID } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isAuth = false;
+  toutAllume = false;
+  lastUpdate = new Promise((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000
+    );
+  });
 
-  appareilOne = 'Machine à laver';
-  appareilTwo = 'Frigo';
-  appareilThree = 'Ordinateur';
+  appareils = [
+    {
+      name: 'Machine à laver',
+      status: 'éteint'
+    },
+    {
+      name: 'Frigo',
+      status: 'allumé'
+    },
+    {
+      name: 'Ordinateur',
+      status: 'éteint'
+    }
+  ];
 
   constructor() {
     setTimeout(
@@ -21,6 +42,7 @@ export class AppComponent {
   }
 
   onAllumer() {
+    this.toutAllume = true;
     console.log('On allume tout !');
   }
 }
