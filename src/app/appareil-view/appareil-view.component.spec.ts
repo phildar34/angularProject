@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonPremierComponent } from './mon-premier.component';
+import { AppareilViewComponent } from './appareil-view.component';
 
-describe('MonPremierComponent', () => {
-  let component: MonPremierComponent;
-  let fixture: ComponentFixture<MonPremierComponent>;
+describe('AppareilViewComponent', () => {
+  let component: AppareilViewComponent;
+  let fixture: ComponentFixture<AppareilViewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonPremierComponent ]
+      declarations: [ AppareilViewComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonPremierComponent);
+    fixture = TestBed.createComponent(AppareilViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

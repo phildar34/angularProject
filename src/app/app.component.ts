@@ -8,7 +8,7 @@ import {AppareilService} from './services/appareil.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  isAuth = false;
+  isAuth;
   toutAllume = false;
   appareils: any[];
   lastUpdate = new Promise((resolve, reject) => {
