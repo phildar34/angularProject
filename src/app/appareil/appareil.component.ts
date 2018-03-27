@@ -28,4 +28,12 @@ export class AppareilComponent implements OnInit {
     }
   }
 
+  onSwitch() {
+    if (this.appareilStatus === 'éteint') {
+      this.appareilStatus = 'allumé';
+    } else {
+      this.appareilStatus = 'éteint';
+    }
+  }
+
 }
